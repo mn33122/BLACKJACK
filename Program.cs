@@ -83,7 +83,7 @@
                 Console.WriteLine("Oavgjort!");
             }
 
-
+            Console.WriteLine("TESTING TESING");
 
 
 
