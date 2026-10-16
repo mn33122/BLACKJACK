@@ -51,6 +51,10 @@ namespace BLACKJACK
             dealer.AddCard(kortlek.DraKort());
 
             Console.WriteLine("\n--- Ny runda ---\n");
+            // Visa dealerns kort (dölj det första) innan spelarens tur så spelaren
+            // kan se vilket kort dealern visar.
+            Console.WriteLine("Dealerns kort:");
+            Console.WriteLine(dealer.HandToString(hideFirstCard: true));
 
             // --- Spelarens tur ---
             // Spelaren kan välja att "hit" (dra) eller "stand" (stanna)
@@ -85,9 +89,10 @@ namespace BLACKJACK
             }
 
             // --- Dealerns tur ---
-            // Visa dealerns kort men dölj det första (vanlig blackjack-uppvisning)
+            // Nu när spelaren är klar, visa dealerns gömda kort så att dealern
+            // kan bestämma om denne ska dra fler kort utifrån hela handen.
             Console.WriteLine("\nDealerns kort:");
-            Console.WriteLine(dealer.HandToString(hideFirstCard: true));
+            Console.WriteLine(dealer.HandToString());
 
             // Om spelaren inte blev tjock får dealern spela enligt sina regler
             if (spelare.GetHandValue() <= 21)
