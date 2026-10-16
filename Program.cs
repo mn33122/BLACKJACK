@@ -1,7 +1,10 @@
-﻿namespace BLACKJACK
+﻿using System;
+
+namespace BLACKJACK
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
 
