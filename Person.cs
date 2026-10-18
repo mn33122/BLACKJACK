@@ -11,9 +11,10 @@ namespace BLACKJACK
         // Representerar korten en person (spelare eller dealer) för närvarande har.
         public List<Kort> Hand { get; private set; } = new List<Kort>();
 
+        // Lägg till ett kort till personens hand
         public void AddCard(Kort kort)
         {
-            // Lägg till ett draget kort till personens hand
+            
             Hand.Add(kort);
         }
 

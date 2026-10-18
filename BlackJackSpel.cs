@@ -75,8 +75,11 @@ namespace BLACKJACK
                 // Fråga spelaren om ett nytt kort
                 Console.Write("Vill du ha ett kort till? (J/N): ");
                 var svar = Console.ReadLine();
+
+                // Om spelaren svarar "J" (ja)
                 if (!string.IsNullOrWhiteSpace(svar) && svar.Equals("J", StringComparison.OrdinalIgnoreCase))
                 {
+                    // dra ett kort från kortleken och lägg till det i spelarens hand
                     var kort = kortlek.DraKort();
                     spelare.AddCard(kort);
                     Console.WriteLine($"Du drog: {kort}\n");

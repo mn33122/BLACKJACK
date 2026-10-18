@@ -6,14 +6,14 @@ namespace BLACKJACK
     {
         // Kort representerar ett enskilt spelkort med färg, valör och numeriskt värde.
 
-        // The suit / color of the card (e.g. Hjärter, Ruter)
+        // kortets färg (t.ex. Hjärter, Ruter, Klöver, Spader)
         public string Farg { get; }
-        // The face/valor of the card (e.g. Ess, 2, Knäkt)
+        // kortets valör (t.ex. Ess, 2, Knäkt)
         public string Valor { get; }
-        // The numeric blackjack value for the card (Ace = 11 initially)
+        // kortets numeriska värde för blackjack (Ess = 11 initialt)
         public int Varde { get; }
 
-        // Construct a card with suit, face and numeric value
+        // Skapa ett kort med färg, valör och numeriskt värde
         public Kort(string farg, string valor, int varde)
         {
             Farg = farg;
@@ -21,7 +21,7 @@ namespace BLACKJACK
             Varde = varde;
         }
 
-        // Provide a readable representation like "Ess Hjärter (11)"
+        // Ge en läsbar representation som "Ess Hjärter (11)"
         public override string ToString()
         {
             return $"{Valor} {Farg} ({Varde})";

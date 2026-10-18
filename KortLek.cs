@@ -7,6 +7,8 @@ namespace BLACKJACK
     public class Kortlek
     {
         // Kortlek representerar en standardkortlek med 52 kort som kan blandas och dra kort från.
+
+        // Lista som innehåller alla kort i kortleken
         private List<Kort> kortlek;
 
         // Aktuellt index för nästa kort att dra från kortleken
@@ -15,12 +17,17 @@ namespace BLACKJACK
         // Kortlek konstruktor skapar en ny kortlek, blandar den och sätter aktuelltKort till 0
         public Kortlek()
         {
+            // Skapa en ny lista för kortleken
             kortlek = new List<Kort>();
 
+            
+            // Skapa kortleken
             SkapaKortlek();
 
+            // Blanda kortleken
             BlandaKort();
 
+            // Sätt aktuelltKort till 0
             aktuelltKort = 0;
         }
 
@@ -57,6 +64,7 @@ namespace BLACKJACK
             // Skapa korten och lägg till dem i kortleken
             foreach (string farg in farger)
             {
+                // Skapa korten för varje färg
                 for (int i = 0; i < valorer.Length; i++)
                 {
                     int varde;
@@ -85,11 +93,12 @@ namespace BLACKJACK
             }
         }
 
-        // Blandakort slumpmässigt blandar kortleken
+        // Blandakort() slumpmässigt blandar kortleken
         public void BlandaKort()
         {
             Random random = new Random();
 
+            
             for (int i = 0; i < kortlek.Count; i++)
             {
                 int slumpIndex =
